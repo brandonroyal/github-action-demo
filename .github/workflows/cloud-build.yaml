@@ -59,5 +59,6 @@ jobs:
     - name: Build
       run: |-
         gcloud builds submit \
+          --config \
           --quiet \
           --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"

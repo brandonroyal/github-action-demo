@@ -1,6 +1,8 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/broyal-demo-354814/build-demo', '.']
+  - name: 'bash'
+    args: ['echo', 'I am running in a private pool!'] 
 options:
   pool:
     name: 'projects/broyal-demo-354814/locations/us-central1/workerPools/demo-pool'
